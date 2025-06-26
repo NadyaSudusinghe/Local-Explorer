@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Brandenburg Gate",
+    "city": "Berlin",
+    "image": "https://picsum.photos/id/10/500/300",
+    "description": "The Brandenburg Gate is one of Berlin’s most iconic landmarks, symbolizing unity and peace. Originally built in the 18th century as a neoclassical city gate, it has stood through major historical moments including the Cold War and the fall of the Berlin Wall."
+  },
+  {
+    "id": 2,
+    "name": "Neuschwanstein Castle",
+    "city": "Schwangau",
+    "image": "https://picsum.photos/id/11/500/300",
+    "description": "Perched on a rugged hill in Bavaria, Neuschwanstein Castle is a fairy-tale fortress that inspired Disney's Cinderella castle. Commissioned by King Ludwig II, it showcases romantic architecture and breathtaking alpine scenery, attracting over a million visitors annually."
+  },
+  {
+    "id": 3,
+    "name": "Cologne Cathedral",
+    "city": "Cologne",
+    "image": "https://picsum.photos/id/13/500/300",
+    "description": "Cologne Cathedral is a towering Gothic masterpiece and UNESCO World Heritage Site. It took over 600 years to complete and houses the Shrine of the Three Kings, attracting pilgrims and architecture enthusiasts from around the world."
+  },
+  {
+    "id": 4,
+    "name": "Miniatur Wunderland",
+    "city": "Hamburg",
+    "image": "https://picsum.photos/id/14/500/300",
+    "description": "Miniatur Wunderland is the world's largest model railway exhibition, located in the historic Speicherstadt district. With intricate miniature landscapes and detailed cityscapes, it’s a marvel of engineering and creativity for both kids and adults."
+  },
+  {
+    "id": 5,
+    "name": "Zwinger Palace",
+    "city": "Dresden",
+    "image": "https://picsum.photos/id/15/500/300",
+    "description": "ugspitze is Germany’s highest peak, offering panoramic views of the Alps. Visitors can reach the summit via cable car or cogwheel train and enjoy snow sports, hiking, or simply the awe-inspiring scenery from the mountaintop."
+  },
+  {
+    "id": 6,
+    "name": "Heidelberg Castle",
+    "city": "Heidelberg",
+    "image": "https://picsum.photos/id/16/500/300",
+    "description": "Overlooking the Neckar River, Heidelberg Castle is a blend of Gothic and Renaissance architecture. Once home to the Electors Palatine, the castle now houses museums and offers stunning views of the city below."
+  },
+  {
+    "id": 7,
+    "name": "Marienplatz",
+    "city": "Munich",
+    "image": "https://picsum.photos/id/17/500/300",
+    "description": "Central square with the famous Glockenspiel and historic New Town Hall."
+  },
+  {
+    "id": 8,
+    "name": "Black Forest",
+    "city": "Baden-Württemberg",
+    "image": "https://picsum.photos/id/18/500/300",
+    "description": "Dense, scenic forest region known for hiking, cuckoo clocks, and folklore."
+  },
+  {
+    "id": 9,
+    "name": "Sanssouci Palace",
+    "city": "Potsdam",
+    "image": "https://picsum.photos/id/28/500/300",
+    "description": "Rococo summer palace of Frederick the Great surrounded by gardens."
+  },
+  {
+    "id": 10,
+    "name": "Römerberg",
+    "city": "Frankfurt",
+    "image": "https://picsum.photos/id/29/500/300",
+    "description": "Historical heart of Frankfurt with medieval buildings and vibrant atmosphere."
+  }
+]
