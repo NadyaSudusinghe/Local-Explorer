@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Attraction from "./Attraction";
-import attractions from "../attractions.json";
+// import attractions from "../attractions.json";
 import { FaSearch } from "react-icons/fa";
 import bgImage from '../assets/images/background.jpg'
 
 const AttractionsList = ({ isHome = false }) => {
 //   console.log(attractions);
-
+const [attractions, setAttractions] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    const fetchAttractions = async () => {
+      const apiUrl = '/api/attractions'
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        console.log(data);
+        setAttractions(data);
+      } catch (error) {
+        console.log('Error fetching data', error);
+      } finally {
+        
+      }
+    }
+    fetchAttractions();
+  }, []);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
