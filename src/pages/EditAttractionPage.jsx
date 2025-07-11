@@ -1,27 +1,33 @@
-import React, { useState } from "react";
+import React from 'react'
+import { useParams,useLoaderData, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+// import { toast } from 'react-toastify';
 import bgImage from "../assets/images/background.jpg";
-import { useNavigate } from "react-router-dom";
 
-const AddAttractionPage = ({addAttraction}) => {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [city, setCity] = useState("");
-  const [image, setImageURL] = useState("");
+const EditAttractionPage = ({editAttractionSubmit}) => {
+  const attraction = useLoaderData();
+
+  const [name, setName] = useState(attraction.name);
+  const [description, setDescription] = useState(attraction.description);
+  const [city, setCity] = useState(attraction.city);
+  const [image, setImageURL] = useState(attraction.image);
 
   const navigate = useNavigate();
+  const {id} = useParams();
 
   const submitForm = (e) => {
     e.preventDefault();
 
-    const newAttraction = {
+    const updatedAttraction = {
+        id,
         name,
         city,
         description,
         image
-    }
-    addAttraction(newAttraction);
-    return navigate('/attractions');
-  };
+    };
+    editAttractionSubmit(updatedAttraction);
+    return navigate(`/attractions/${id}`);
+  }
 
   return (
     <section
@@ -32,7 +38,7 @@ const AddAttractionPage = ({addAttraction}) => {
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <form onSubmit={submitForm}>
             <h2 className="text-3xl text-center font-semibold mb-6">
-              Add Attraction
+              Update Attraction
             </h2>
             <div className="mb-4">
               <label className="block text-gray-700 font-bold mb-2">
@@ -67,9 +73,7 @@ const AddAttractionPage = ({addAttraction}) => {
               ></textarea>
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 font-bold mb-2">
-                City
-              </label>
+              <label className="block text-gray-700 font-bold mb-2">City</label>
               <input
                 type="text"
                 id="city"
@@ -101,7 +105,7 @@ const AddAttractionPage = ({addAttraction}) => {
                 className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 type="submit"
               >
-                Add Attraction
+                Update Attraction
               </button>
             </div>
           </form>
@@ -111,4 +115,4 @@ const AddAttractionPage = ({addAttraction}) => {
   );
 };
 
-export default AddAttractionPage;
+export default EditAttractionPage;
