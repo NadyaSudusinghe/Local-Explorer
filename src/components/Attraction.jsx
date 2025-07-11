@@ -36,8 +36,8 @@ const Attraction = ({ attraction }) => {
                         {attraction.city}
                     </div>
                     <Link
-                        to={`/jobs/${attraction.id}`}
-                        className='h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm'
+                        to={`/attractions/${attraction.id}`}
+                        className='h-[36px] bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-center text-sm'
                     >
                         Read More
                     </Link>

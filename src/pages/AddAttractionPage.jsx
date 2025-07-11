@@ -6,6 +6,7 @@ const AddAttractionPage = ({addAttraction}) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [city, setCity] = useState("");
+  const [image, setImageURL] = useState("");
 
   const navigate = useNavigate();
 
@@ -15,7 +16,8 @@ const AddAttractionPage = ({addAttraction}) => {
     const newAttraction = {
         name,
         city,
-        description
+        description,
+        image
     }
     addAttraction(newAttraction);
     return navigate('/attractions');
@@ -77,6 +79,21 @@ const AddAttractionPage = ({addAttraction}) => {
                 required
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-bold mb-2">
+                Image
+              </label>
+              <input
+                type="url"
+                id="image"
+                name="image"
+                className="border rounded w-full py-2 px-3 mb-2"
+                placeholder="Image URL"
+                required
+                value={image}
+                onChange={(e) => setImageURL(e.target.value)}
               />
             </div>
             <div>
