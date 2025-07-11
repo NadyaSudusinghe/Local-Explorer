@@ -3,13 +3,18 @@ import { FaArrowLeft, FaMapMarker, FaEdit, FaTrash } from "react-icons/fa";
 import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 import bgImage from "../assets/images/background.jpg";
 
-const AttractionPage = () => {
+const AttractionPage = ({deleteAttraction}) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const attraction = useLoaderData();
 
-  const onDeleteClick = () => {
+  const onDeleteClick = (sightId) => {
+    const confirm = window.confirm('Are you sure you want to delete this attraction?')
 
+    if(!confirm) return;
+
+    deleteAttraction(sightId);
+    navigate('/attractions');
   }
 
   return (

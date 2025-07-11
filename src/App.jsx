@@ -32,13 +32,20 @@ const App = () => {
     return;
   }
 
+  const deleteAttraction = async(id) => {
+    const res = await fetch(`/api/attractions/${id}`, {
+      method: 'DELETE'
+    });
+    return;
+  }
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<MainLayout />}>
         <Route index element={<HomePage/>} />
         <Route path='/attractions' element={<AttractionsPage/>} />
         <Route path='/add-attraction' element={<AddAttractionPage addAttraction={addNewAttraction}/>} />
-        <Route path='/attractions/:id' element={<AttractionPage/>} loader={attractionLoader} />
+        <Route path='/attractions/:id' element={<AttractionPage deleteAttraction={deleteAttraction}/>} loader={attractionLoader} />
         <Route path='/edit-attraction/:id' element={<EditAttractionPage editAttractionSubmit={updateAttraction} />} loader={attractionLoader} />
       </Route>
     )
