@@ -6,6 +6,7 @@ import AttractionsPage from './pages/AttractionsPage';
 import AddAttractionPage from './pages/AddAttractionPage';
 import AttractionPage, { attractionLoader } from './pages/AttractionPage';
 import EditAttractionPage from './pages/EditAttractionPage';
+import NotFound from './pages/NotFound';
 
 const App = () => {
 
@@ -47,6 +48,7 @@ const App = () => {
         <Route path='/add-attraction' element={<AddAttractionPage addAttraction={addNewAttraction}/>} />
         <Route path='/attractions/:id' element={<AttractionPage deleteAttraction={deleteAttraction}/>} loader={attractionLoader} />
         <Route path='/edit-attraction/:id' element={<EditAttractionPage editAttractionSubmit={updateAttraction} />} loader={attractionLoader} />
+        <Route path='*' element={<NotFound/>} />
       </Route>
     )
   );
