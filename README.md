@@ -16,35 +16,54 @@ A React-based web application for exploring popular attractions across German ci
 
 ## 📄 Project Structure
 
-* **Pages**:
+### 🗂️ Pages
 
-  * **Home Page**:
-    Displays a small curated list of popular attractions from across Germany.
+- **Home Page**  
+  Displays a small curated list of popular attractions from across Germany.
 
-  * **Attractions Page**:
-    Displays a full list of attractions from various German cities with search functionality.
+- **Attractions Page**  
+  Lists all available attractions from various cities, with a search bar and clickable details.
 
-* **Components (So far)**:
+- **Add Attraction Page**  
+  A form that lets users add new attractions dynamically to the list.
 
-  * **Navbar**: Responsive navigation with links (more links to be added as project grows).
-  * **MainSection**: Hero or introduction section for the Home page.
-  * **AttractionsList**: Lists all available attractions (or filtered results based on search).
-  * **Attraction**: Individual attraction card/component.
+- **Attraction Details Page**  
+  Displays detailed info for a selected attraction. Includes edit and delete options.
 
-* **Layout**:
+- **Edit Attraction Page**  
+  Allows editing existing attraction data and saves changes via mock API.
 
-  * A **MainLayout** wraps all pages, providing consistent layout and navigation across routes.
+---
+
+### 🧩 Components
+
+- **Navbar**: Responsive navigation bar
+- **MainSection**: Hero or introduction section on the Home page
+- **AttractionsList**: Renders a list of attraction cards (with search support)
+- **Attraction**: Individual card for each attraction
+- **AttractionDetails**: Detailed view of a selected attraction
+- **Form Components**: Reusable components for adding/editing attractions
+
+---
+
+### ⚙️ Layout
+
+- **MainLayout** wraps all routes and maintains consistent structure/navigation across the app.
 
 ---
 
 ## 🔍 Features (Current)
 
-* ✅ Routing between Home and Attractions pages
-* ✅ Responsive UI styled with Tailwind CSS
-* ✅ Local JSON backend (via JSON Server) for dynamic data
-* ✅ Search bar on Attractions page to filter attractions by title
-* ✅ React Hooks used for state and data fetching
-* ✅ Future-ready modular structure for adding more pages and components
+- ✅ Routing between multiple pages using React Router
+- ✅ Responsive UI with Tailwind CSS
+- ✅ Local JSON backend using JSON Server
+- ✅ Search functionality on the Attractions page
+- ✅ Add Attraction form (dynamically adds to the list)
+- ✅ Attraction Details Page with:
+  - Edit attraction (with full form and redirect)
+  - Delete attraction (with browser confirmation)
+- ✅ Modular, scalable file structure
+- ✅ Hooks-based architecture for clean state and effect handling
 
 ---
 
@@ -53,7 +72,7 @@ A React-based web application for exploring popular attractions across German ci
 1. **Clone the repo:**
 
 ```bash
-git clone https://github.com/your-username/local-explorer.git
+git clone https://github.com/NadyaSudusinghe/Local-Explorer.git
 cd local-explorer
 ```
 
@@ -75,7 +94,7 @@ npx json-server --watch data/attractions.json --port 5000
 npm run dev
 ```
 
-Then visit: [http://localhost:5173](http://localhost:5173)
+Then open: http://localhost:5173
 
 ---
 
@@ -83,21 +102,23 @@ Then visit: [http://localhost:5173](http://localhost:5173)
 
 * Adding more German cities and attractions
 * Filters by city or category
-* Details page for each attraction
+* Improved form validation and user feedback
 * User reviews / ratings section
-* Possibly add map integration
+* Loading and error handling states
+* Authentication for protected routes
 * Deployment for public demo
 
 ---
 
-## ✅ Honest Status:
+## ✅ Project Status:
 
-This is an **actively developing personal learning project**, with core focus on:
+This is an **actively developed personal project**, focused on:
 
-* **Front-end React skills**
+* **Front-end development with React**
+* **Local API simulation and CRUD operations**
+* **Component-based architecture**
 * **State management**
 * **Routing**
-* **Mock API integration**
 * **Tailwind styling**
 
 Not yet production-ready.
