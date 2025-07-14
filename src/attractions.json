@@ -11,7 +11,7 @@
       "id": "2",
       "name": "Neuschwanstein Castle",
       "city": "Schwangau",
-      "description": "Perched on a rugged hill in Bavaria, Neuschwanstein Castle is a fairy-tale fortress that inspired Disney's Cinderella castle. Commissioned by King Ludwig II, it showcases romantic architecture and breathtaking alpine scenery, attracting over a million visitors annually.++",
+      "description": "Perched on a rugged hill in Bavaria, Neuschwanstein Castle is a fairy-tale fortress that inspired Disney's Cinderella castle. Commissioned by King Ludwig II, it showcases romantic architecture and breathtaking alpine scenery, attracting over a million visitors annually.",
       "image": "https://picsum.photos/id/11/500/300"
     },
     {
@@ -76,6 +76,13 @@
       "city": "Altona",
       "description": "test4",
       "image": "https://picsum.photos/id/25/500/300"
+    },
+    {
+      "id": "ee77",
+      "name": "test1",
+      "city": "Hamburg",
+      "description": "test1",
+      "image": "https://picsum.photos/id/13/500/300"
     }
   ]
 }

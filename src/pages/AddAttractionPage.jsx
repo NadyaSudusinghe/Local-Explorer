@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import bgImage from "../assets/images/background.jpg";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AddAttractionPage = ({addAttraction}) => {
   const [name, setName] = useState("");
@@ -20,6 +21,7 @@ const AddAttractionPage = ({addAttraction}) => {
         image
     }
     addAttraction(newAttraction);
+    toast.success('Sight added successfully!');
     return navigate('/attractions');
   };
 

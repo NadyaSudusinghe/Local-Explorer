@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowLeft, FaMapMarker, FaEdit, FaTrash } from "react-icons/fa";
 import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 import bgImage from "../assets/images/background.jpg";
+import { toast } from "react-toastify";
 
 const AttractionPage = ({deleteAttraction}) => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const AttractionPage = ({deleteAttraction}) => {
     if(!confirm) return;
 
     deleteAttraction(sightId);
+    toast.success('Sight updated successfully!');
     navigate('/attractions');
   }
 

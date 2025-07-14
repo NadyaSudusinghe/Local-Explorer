@@ -3,6 +3,7 @@ import { useParams,useLoaderData, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 // import { toast } from 'react-toastify';
 import bgImage from "../assets/images/background.jpg";
+import { toast } from 'react-toastify';
 
 const EditAttractionPage = ({editAttractionSubmit}) => {
   const attraction = useLoaderData();
@@ -26,6 +27,7 @@ const EditAttractionPage = ({editAttractionSubmit}) => {
         image
     };
     editAttractionSubmit(updatedAttraction);
+    toast.success('Sight updated successfully');
     return navigate(`/attractions/${id}`);
   }
 
